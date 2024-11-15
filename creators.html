@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creadores</title>
+    <style>
+        /* Estilo general del fondo */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #282c34; /* Fondo gris oscuro */
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            justify-content: center; /* Centra el contenido horizontalmente */
+            align-items: flex-start; /* Alinea al inicio en vertical */
+            color: white; /* Todo el texto será blanco */
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-right: 20px;
+            height: 100%;
+            background-color: #282c34;
+            width: 250px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 30px;
+        }
+
+        /* Estilo para el logo */
+        .logo {
+            width: 125px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        /* Estilo para el menú de opciones */
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Estilo para cada opción de menú */
+        .menu-item {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Estilo para los iconos de cada opción */
+        .menu-item img {
+            width: 27px;
+            height: auto;
+            margin-right: 8px;
+        }
+
+        /* Línea gris al lado derecho de las opciones */
+        .line {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3px; /* Grosor de la línea */
+            height: 100%; /* Extiende la línea hasta el final de la barra lateral */
+            background-color: rgba(128, 128, 128, 0.093);
+        }
+
+        /* Contenedor principal de los creadores */
+        .creators-container {
+            background-color: #282c34; /* Fondo gris oscuro */
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 1000px; /* Aumenta el tamaño del contenedor */
+            width: 100%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-left: 300px; /* Mueve el contenedor de creadores a la derecha */
+        }
+
+        /* Título de la sección de creadores */
+        .creators-header {
+            text-align: center;
+            border-bottom: 2px solid #444;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .creators-header h1 {
+            font-size: 32px;
+            margin: 0;
+        }
+
+        /* Contenedor de creadores */
+        .creators-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        /* Estilo para cada creador */
+        .creator-item {
+            text-align: center;
+            background-color: #353b45;
+            border-radius: 15px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .creator-item:hover {
+            transform: scale(1.05);
+        }
+
+        .creator-item img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .creator-item h2 {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+
+        .creator-item p {
+            font-size: 16px;
+            color: #bbb;
+            margin-bottom: 10px;
+        }
+
+        .creator-item a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #fe2c55;
+            font-weight: bold;
+        }
+
+        /* Estilo para los enlaces sociales */
+        .social-icons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 5px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Barra lateral con opciones -->
+    <div class="sidebar">
+        <!-- Imagen del logo en la parte superior -->
+        <img src="img/logo_1000x500.png" alt="Logo" class="logo">
+
+        <!-- Menú de opciones -->
+        <nav class="menu">
+            <a href="index.html" class="menu-item">
+                <img src="img/home.png" alt="Inicio Icono">
+                Para Ti
+            </a>
+            <a href="messages.html" class="menu-item">
+                <img src="img/messages.png" alt="Mensajes Icono">
+                Mensajes
+            </a>
+            <a href="creators.html" class="menu-item">
+                <img src="img/creators.png" alt="Creadores Icono">
+                Creadores
+            </a>
+            <a href="profile.html" class="menu-item">
+                <img src="img/profile.png" alt="Perfil Icono">
+                Perfil
+            </a>
+        </nav>
+
+        <!-- Línea gris al lado derecho de todas las opciones -->
+        <div class="line"></div>
+    </div>
+
+    <!-- Contenedor principal de los creadores -->
+    <div class="creators-container">
+        <!-- Encabezado de la sección de creadores -->
+        <div class="creators-header">
+            <h1>Conoce a los Creadores</h1>
+        </div>
+
+        <!-- Lista de creadores -->
+        <div class="creators-list">
+            <!-- Creador 1: Alex -->
+            <div class="creator-item">
+                <img src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-euttp/a3f7e4337da1923893f3321e2af5a4a3~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=7167&refresh_token=25eb7876ec35ea69e75e0d4ecb8b8edd&x-expires=1731776400&x-signature=7TmyJrirLlb8TYSW8%2FnxyexUQCg%3D&shp=a5d48078&shcp=81f88b70" alt="Alex">
+                <h2>Alex</h2>
+                <p>Desarrollador de la pagina web</p>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@ImAlexGG" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" alt="YouTube">
+                    </a>
+                    <a href="https://www.tiktok.com/@imalexgg1" target="_blank">
+                        <img src="https://cdn.pixabay.com/photo/2021/06/15/12/28/tiktok-6338432_1280.png" alt="TikTok">
+                    </a>
+                    <a href="https://github.com/ElAlexNose/Tik.Taco-2.0" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3291/3291695.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.instagram.com/el.alex.albox" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Creador 2: Sergio -->
+            <div class="creator-item">
+                <img src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-euttp/1094e7477bdb2c1ea12b2b717f96a8d6~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=61137&refresh_token=671f02aba719c6945bc81358a93203a7&x-expires=1731776400&x-signature=lKbAIJ97gFBE0BuzP82VEusqz%2Bg%3D&shp=a5d48078&shcp=81f88b70" alt="Sergio">
+                <h2>Sergio</h2>
+                <p>Desarrollador de la pagina web</p>
+                <div class="social-icons">
+                    <a href="https://www.tiktok.com/@sergiocapybara" target="_blank">
+                        <img src="https://cdn.pixabay.com/photo/2021/06/15/12/28/tiktok-6338432_1280.png" alt="TikTok"
+                    </a>
+                    <a href="https://www.instagram.com/capybara.sergio/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

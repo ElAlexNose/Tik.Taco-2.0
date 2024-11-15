@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajes de Fernanfloo</title>
+    <style>
+        /* Estilo general del fondo */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #282c34; /* Fondo gris oscuro */
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            justify-content: center; /* Centra el contenido horizontalmente */
+            align-items: flex-start; /* Alinea al inicio en vertical */
+            color: white; /* Todo el texto será blanco */
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-right: 20px;
+            height: 100%;
+            background-color: #282c34;
+            width: 250px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 30px;
+        }
+
+        /* Estilo para el logo */
+        .logo {
+            width: 125px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        /* Estilo para el menú de opciones */
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Estilo para cada opción de menú */
+        .menu-item {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Estilo para los iconos de cada opción */
+        .menu-item img {
+            width: 27px;
+            height: auto;
+            margin-right: 8px;
+        }
+
+        /* Línea gris al lado derecho de las opciones */
+        .line {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3px; /* Grosor de la línea */
+            height: 100%; /* Extiende la línea hasta el final de la barra lateral */
+            background-color: rgba(128, 128, 128, 0.093);
+        }
+
+        /* Contenedor principal de los mensajes */
+        .messages-container {
+            background-color: #282c34; /* Fondo gris oscuro */
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 800px; /* Aumenta el tamaño del contenedor */
+            width: 100%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-left: 300px; /* Mueve el contenedor de mensajes a la derecha */
+        }
+
+        /* Título de la sección de mensajes */
+        .messages-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .messages-header h1 {
+            font-size: 32px; /* Aumenta el tamaño del título */
+            margin: 0;
+        }
+
+        .messages-header button {
+            background-color: #fe2c55;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        .messages-header button:hover {
+            background-color: #e12047;
+        }
+
+        /* Contenedor de mensajes */
+        .messages-list {
+            margin-top: 20px;
+        }
+
+        /* Estilo para cada mensaje */
+        .message-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background-color: #353b45;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .message-item:hover {
+            background-color: #4a5159;
+        }
+
+        .message-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .message-item .message-info {
+            flex: 1;
+        }
+
+        .message-item .message-info h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .message-item .message-info p {
+            margin: 5px 0;
+            color: #bbb;
+        }
+
+        /* Estilo para el contenedor de detalles del mensaje */
+        .message-details {
+            display: none;
+            margin-top: 20px;
+            background-color: #353b45;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .message-details h3 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .message-details p {
+            font-size: 18px;
+        }
+
+        /* Enlaces sociales */
+        .social-links {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #fe2c55;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra lateral con opciones -->
+    <div class="sidebar">
+        <!-- Imagen del logo en la parte superior -->
+        <img src="img/logo_1000x500.png" alt="Logo" class="logo">
+
+        <!-- Menú de opciones -->
+        <nav class="menu">
+            <a href="index.html" class="menu-item">
+                <img src="img/home.png" alt="Inicio Icono">
+                Para Ti
+            </a>
+            <a href="messages.html" class="menu-item">
+                <img src="img/messages.png" alt="Mensajes Icono">
+                Mensajes
+            </a>
+            <a href="creators.html" class="menu-item">
+                <img src="img/creators.png" alt="Creadores Icono">
+                Creadores
+            </a>
+            <a href="profile.html" class="menu-item">
+                <img src="img/profile.png" alt="Perfil Icono">
+                Perfil
+            </a>
+        </nav>
+
+        <!-- Línea gris al lado derecho de todas las opciones -->
+        <div class="line"></div>
+    </div>
+
+    <!-- Contenedor principal de los mensajes -->
+    <div class="messages-container">
+        <!-- Encabezado de la sección de mensajes -->
+        <div class="messages-header">
+            <h1>Mensajes</h1>
+            <button>Nuevo mensaje</button>
+        </div>
+
+        <!-- Lista de mensajes -->
+        <div class="messages-list">
+            <div class="message-item" onclick="showMessageDetails('message1')">
+                <img src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-euttp/a3f7e4337da1923893f3321e2af5a4a3~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=19517&refresh_token=09cb5f6d2bade1d8167a582083c7be4a&x-expires=1731776400&x-signature=7TmyJrirLlb8TYSW8%2FnxyexUQCg%3D&shp=a5d48078&shcp=81f88b70" alt="Foto de perfil">
+                <div class="message-info">
+                    <h2>el.meme.gato.3000</h2>
+                    <p>¡Hola Fernanfloo! ¿Cómo estás?</p>
+                </div>
+            </div>
+            <div class="message-item" onclick="showMessageDetails('message2')">
+                <img src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/42febb44ba1022c07291a4c71a27cc9a~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=50292&refresh_token=c40f7598792694bcb35fe52ba0631d21&x-expires=1731776400&x-signature=2E7EU%2Fp9juu7Tz2n65auYbXKMt8%3D&shp=a5d48078&shcp=81f88b70" alt="Foto de perfil">
+                <div class="message-info">
+                    <h2>nosebartus091</h2>
+                    <p>¿Cuándo harás otro streaming?</p>
+                </div>
+            </div>
+            <div class="message-item" onclick="showMessageDetails('message3')">
+                <img src="https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-euttp/2163ebfe49e70902ba64fc70b2d4efa7~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=17412&refresh_token=b8076310737c16ee1765cd4dca6b2382&x-expires=1731776400&x-signature=SjSQNfhlnm8z%2FHiJxReyyfpFZzE%3D&shp=a5d48078&shcp=81f88b70" alt="Foto de perfil">
+                <div class="message-info">
+                    <h2>queso3000</h2>
+                    <p>¡Gran video en YouTube! 😄</p>
+                </div>
+            </div>
+            <!-- Aquí puedes agregar más mensajes de la misma forma -->
+        </div>
+
+        <!-- Detalles del mensaje (cuando se haga clic en un mensaje) -->
+        <div class="message-details" id="message1">
+            <h3>el.meme.gato.3000</h3>
+            <p>¡Hola Fernanfloo! ¿Cómo estás? ¿Te gustaría hacer una colaboración en un video?</p>
+        </div>
+        <div class="message-details" id="message2">
+            <h3>nosebartus091</h3>
+            <p>¿Cuándo harás otro streaming? ¡Me encantan tus directos!</p>
+        </div>
+        <div class="message-details" id="message3">
+            <h3>queso3000</h3>
+            <p>¡Gran video en YouTube! 😄 ¿Cuándo subes más contenido?</p>
+        </div>
+    </div>
+
+    <!-- Función para mostrar los detalles de un mensaje -->
+    <script>
+        function showMessageDetails(messageId) {
+            // Primero oculta todos los detalles
+            const allDetails = document.querySelectorAll('.message-details');
+            allDetails.forEach(detail => {
+                detail.style.display = 'none';
+            });
+
+            // Muestra el detalle del mensaje seleccionado
+            const selectedMessage = document.getElementById(messageId);
+            selectedMessage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
